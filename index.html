@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Structural Gaps Project — ψ–Δ Framework & Endpoint–Path Gap Diagnostic</title>
-  <meta name="description" content="Canonical entry for two companion works: (A) relative-entropy endpoint–path gap diagnostic for coarse-graining/RG flows; (B) ψ–Δ framework for package-locked cross-level reporting, auditability, and undefined outputs when clauses are missing." />
+  <meta name="description" content="Canonical entry for two companion works: (A) V-conditioned endpoint–path information gaps for RG/EFT window validity; (B) ψ–ΔI→G package-locked reporting for cross-level claims (well-posed vs undefined, resolution-aware ≈ε semantics), with explicit viewpoint–structure coupling." />
   <link rel="canonical" href="https://ybing2093-ops.github.io/" />
 
+  <!-- Open Graph / Social preview -->
   <meta property="og:title" content="Structural Gaps Project" />
-  <meta property="og:description" content="Canonical entry: DOI, repositories, start-here map, minimal reproduction, scope, falsification hooks." />
+  <meta property="og:description" content="Canonical entry: DOI, repositories, Start in 60 seconds, foundational positioning (V-locked), minimal definitions (machine anchors), reproducibility, scope, falsification hooks." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ybing2093-ops.github.io/" />
 
+  <!-- Minimal Schema.org (helps machine readers) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
     "name":"Structural Gaps Project (Canonical Entry)",
     "about":[
-      "coarse-graining","renormalization group","relative entropy",
-      "information geometry","multi-level systems","structural gaps",
-      "process vs endpoint","auditability","well-posed vs undefined"
+      "coarse-graining","renormalization group","relative entropy","information geometry",
+      "endpoint vs path","sufficient statistics","multi-level systems","package-locked reporting",
+      "well-posed vs undefined","resolution-aware equivalence","viewpoint-structure coupling",
+      "cross-level continuity","causal claims"
     ],
     "isBasedOn":[
       {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18414030"},
@@ -42,11 +45,17 @@
     .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
     @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
     pre { background: #f6f8fa; border-radius: 10px; padding: 12px; overflow: auto; }
+    code { background: #f6f8fa; border-radius: 8px; padding: 2px 6px; }
     a { text-decoration: none; }
     a:hover { text-decoration: underline; }
     .muted { color: #555; }
     .k { display:inline-block; border:1px solid #eee; border-radius:999px; padding:4px 10px; margin:4px 6px 0 0; background:#fafafa; }
+    dl { margin: 0; }
+    dt { margin-top: 10px; font-weight: 700; }
+    dd { margin-left: 0; margin-top: 4px; color:#222; }
+    hr { border:0; border-top:1px solid #eee; margin: 12px 0; }
     footer { padding: 20px 18px; border-top: 1px solid #eee; color:#666; }
+    .small { font-size: 0.95em; }
   </style>
 </head>
 
@@ -54,22 +63,155 @@
   <header>
     <main>
       <h1>Structural Gaps Project</h1>
+
       <p class="muted">
-        <strong>Core thesis (30 seconds):</strong><br/>
-        Endpoint agreement is not the same as process-level validity. This project provides
-        (A) a relative-entropy endpoint–path gap diagnostic that exposes process-level mismatch under reduction, and
-        (B) a package-locked cross-level reporting framework (ψ–Δ) that makes “well-posed vs undefined” explicit under declared assumptions.
+        <strong>Core contribution (reader + machine oriented):</strong><br/>
+        Two companion works make cross-level “endpoint looks consistent” a <em>declared, testable</em> statement rather than an implicit assumption.
+        (A) fixes a viewpoint <code>V</code> and defines strict and proxy endpoint–path gaps (<code>Γpath</code>, <code>Γgeo</code>) so endpoint matching on a finite RG/EFT window is licensed <em>iff</em> the endpoint–path residual vanishes under that fixed specification.
+        (B) fixes a declared package <code>V</code> and defines package-locked quantities (<code>Ψ</code>, <code>ΔI→G</code>) together with resolution-aware <code>≈ε</code> semantics and explicit <em>undefinedness</em> when clauses are missing, so cross-level claims are either well-posed under a locked package or explicitly non-licensed.
       </p>
-      <p class="muted">
-        <strong>Start:</strong> If you want the falsifiable diagnostic, start with (A). If you want the semantic/audit protocol for cross-level claims, start with (B).
+
+      <p class="muted small">
+        <strong>Navigation:</strong> Want the falsifiable RG/EFT diagnostic → start with (A). Want the cross-level reporting discipline (well-posed vs undefined, ≈ε semantics) → start with (B).
       </p>
     </main>
   </header>
 
   <main>
+
+    <!-- A) Start in 60 seconds -->
+    <section class="card" id="start-60-seconds">
+      <h2>Start in 60 seconds</h2>
+      <ul>
+        <li>
+          <strong>Read (A):</strong> Endpoint–Path Gap diagnostic — endpoint matching on a finite window is valid <em>iff</em> the endpoint–path residual vanishes under fixed viewpoint <code>V</code>.
+          (<a href="https://doi.org/10.5281/zenodo.18414030">DOI</a>,
+           <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">repo</a>)
+        </li>
+        <li>
+          <strong>Reproduce:</strong> one command → one key artifact:
+          <code>python run_b1_path2.py</code> → <code>fig_gamma_geo_ci.pdf</code>.
+        </li>
+        <li>
+          <strong>Read (B):</strong> ψ–ΔI→G framework — cross-level claims are licensed only under a declared package <code>V</code>;
+          missing clauses ⇒ report <em>undefined</em> (not forced continuity).
+          (<a href="https://doi.org/10.5281/zenodo.18456597">DOI</a>,
+           <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">repo</a>)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Foundational positioning -->
+    <section class="card" id="foundational-positioning">
+      <h2>Foundational positioning (operational, V-locked)</h2>
+
+      <p class="muted">
+        <strong>Operational reformulation:</strong>
+        this project reframes cross-level “causal” and “continuity” claims as <em>reporting-licensed</em> objects.
+        A cross-level statement is meaningful only under a declared specification package <code>V</code> (interface, admissible reconstructions, discrepancy rule, domain/reachability, and reporting threshold).
+        If required clauses are not declared, the correct output state is <strong>undefined</strong>, not a forced value.
+      </p>
+
+      <p class="muted">
+        <strong>Viewpoint–structure coupling:</strong>
+        all reported structural quantities are <code>V</code>-conditioned.
+        Changing <code>V</code> changes what is comparable and what is reportable; cross-<code>V</code> comparisons require explicit comparability/transport clauses.
+        Without such clauses, numerical comparison is non-licensed (undefined).
+      </p>
+
+      <p class="muted">
+        <strong>Δ as the cross-level structural term:</strong>
+        <code>Δ</code> is used to denote a residual/structural coupling between levels (e.g., macro description vs micro mechanism; deterministic reporting vs probabilistic behavior) under the declared package <code>V</code>.
+        Whether <code>ψ</code> and <code>Δ</code> are reported as “≈0” or “&gt;0” is always relative to the chosen <strong>resolution / reporting convention</strong>;
+        “≈0” means “below the declared resolution,” and does not denote ontological identity.
+      </p>
+    </section>
+
+    <!-- B) Minimal objects -->
+    <section class="card" id="minimal-objects">
+      <h2>Minimal objects (machine-readable anchors)</h2>
+      <p class="muted">
+        One-sentence anchors for retrieval/citation. Terms are used as defined in the companion works (A) and (B).
+        Note: both papers use a symbol <code>V</code>, but with different roles (RG/EFT viewpoint vs ψ–Δ package).
+      </p>
+
+      <h3>Anchors from (A) Endpoint–Path Gaps</h3>
+      <dl>
+        <dt><code>Viewpoint V (RG/EFT)</code></dt>
+        <dd>A fully specified analysis setting that locks interface/protocol, regulator/scheme and threshold conventions, model class and reconstruction, divergence functional, and aggregation; all reported gaps are V-conditioned.</dd>
+
+        <dt><code>Δpath</code></dt>
+        <dd>The strict path-process divergence (full-trajectory divergence) between two V-induced scale-chain process objects.</dd>
+
+        <dt><code>Δpair</code></dt>
+        <dd>The strict endpoint-pair marginal divergence induced by retaining only the endpoint joint variable <code>E=(Y0,YN)</code> from the path object.</dd>
+
+        <dt><code>Γpath</code></dt>
+        <dd>The strict endpoint–path residual in the decomposition <code>Δpath = Δpair + Γpath</code>, with <code>Γpath ≥ 0</code>; <code>Γpath = 0</code> is the sharp endpoint sufficiency criterion under fixed V.</dd>
+
+        <dt><code>Route I: ΔI</code></dt>
+        <dd>The viewpoint-locked endpoint divergence constructed by aggregating interface-readable endpoint discrepancies; distinct from <code>Δpair</code> unless explicitly aligned by implementation choice.</dd>
+
+        <dt><code>Route II: Ψ, LII</code></dt>
+        <dd>Information speed <code>Ψ</code> and accumulated path length <code>LII=∫Ψ dγ</code> induced from a local second-order expansion under declared validity conditions (e.g. geometry-enabled window conditions).</dd>
+
+        <dt><code>dend</code></dt>
+        <dd>The endpoint distance induced by the same Route-II structure (distance between endpoints under the induced geometry), used to compare endpoints vs trajectory under a unified length scale.</dd>
+
+        <dt><code>Γgeo</code></dt>
+        <dd>A computable proxy gap defined by <code>Γgeo := LII − dend</code>, used only when its declared validity conditions hold; correspondence to <code>Γpath</code> is treated as calibration, not automatic identity.</dd>
+      </dl>
+
+      <hr/>
+
+      <h3>Anchors from (B) ψ–ΔI→G Framework</h3>
+      <dl>
+        <dt><code>Declared package V (ψ–Δ)</code></dt>
+        <dd>An audit bundle that locks boundary/reachability, designated cross-level maps, discrepancy rule, admissible reconstructions, reporting threshold <code>ε</code>, and (when invoked) comparability/transport and audit clauses.</dd>
+
+        <dt><code>Ψ(L,A;V)</code></dt>
+        <dd>Intra-level structural frustration index: the infimum of a declared nonnegative conflict functional over the declared reachable set under the locked package.</dd>
+
+        <dt><code>ΔI→G(L;V)</code></dt>
+        <dd>Fixed-slice cross-level residual: minimax mismatch remaining after compressing to a global description and reconstructing via the declared admissible lifting class under the declared discrepancy rule.</dd>
+
+        <dt><code>≈ε</code></dt>
+        <dd>Resolution-aware reporting equivalence: cross-level “=” is read operationally as indistinguishability at threshold <code>ε</code> under the locked package, not as ontological identity.</dd>
+
+        <dt><code>Undefined (non-licensing output)</code></dt>
+        <dd>If required clauses (interface/admissibility/domain gating/transport for cross-package comparisons) are missing, the correct output state is “undefined” rather than a forced numerical surrogate.</dd>
+
+        <dt><code>Δ* (meta-gap guardrail)</code></dt>
+        <dd>A semantic guardrail stating that genuine cross-level relations encode non-identity; it blocks reading cross-level equalities as ontological equalities and confines “≈ε 0” to a reporting convention.</dd>
+
+        <dt><code>Viewpoint–structure coupling</code></dt>
+        <dd>Structural quantities are defined only relative to a declared package/viewpoint; changing the package changes reportability and comparability, and cross-package comparison requires explicit transport/comparability clauses.</dd>
+
+        <dt><code>Cross-level continuity (licensed)</code></dt>
+        <dd>“Continuity across levels” means <code>≈ε</code>-indistinguishability under a declared package <code>V</code>; it is not a claim of ontological identity.</dd>
+
+        <dt><code>Causal claim (V-locked)</code></dt>
+        <dd>A cross-level “causal” statement is reportable only if the intervention/identification interface and admissible reconstructions are declared in <code>V</code>; otherwise it is undefined.</dd>
+
+        <dt><code>Δ as cross-level structural term</code></dt>
+        <dd><code>Δ</code> denotes the residual structural coupling between macro and micro (or deterministic reporting and probabilistic behavior) under declared <code>V</code>; reporting “<code>Δ≈0</code>” means “below the declared resolution,” not “<code>Δ=0</code>” in an ontological sense.</dd>
+      </dl>
+
+      <details class="small" style="margin-top:12px;">
+        <summary><strong>Canonical meta-constraint (Structural fracture law)</strong> (as stated in (B))</summary>
+        <p class="muted">
+          When a logical system simultaneously contains opposing elements, and these elements produce feedback on the system,
+          if one attempts to connect, across levels, the system’s whole (macroscopic determinacy) and the system’s internal factors
+          (microscopic behavioral logic) by a single continuous-logic principle within a single perspective,
+          then a judgment discontinuity is structurally unavoidable.
+        </p>
+      </details>
+    </section>
+
+    <!-- Two main cards -->
     <div class="grid">
-      <section class="card">
-        <h2>(A) Endpoint–Path Gaps (RG / coarse-graining diagnostic)</h2>
+      <section class="card" id="paper-a">
+        <h2>(A) Relative-Entropy Endpoint–Path Gaps (RG/EFT diagnostic)</h2>
         <p>
           DOI: <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a><br/>
           Repo: <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">github.com/ybing2093-ops/endpoint-path-gaps-qed</a>
@@ -77,17 +219,21 @@
 
         <h3>Start here</h3>
         <ul>
-          <li>Read: repo README (Start here) + AUDIT.md (if present)</li>
-          <li>Paper (PDF): Zenodo DOI above (canonical archive)</li>
+          <li>Read: Abstract + Sec. 1 (main message), then Sec. 5 (Δpath=Δpair+Γpath) and Sec. 8 (validity/decision protocol).</li>
+          <li>Then: run the minimal reproduction command to generate the reference figure.</li>
         </ul>
 
         <h3>Minimal reproduction</h3>
         <pre><code>python run_b1_path2.py
 # expected output: fig_gamma_geo_ci.pdf</code></pre>
+
+        <p class="muted small">
+          Meaning: on a fixed finite window, endpoint matching is licensed as a sufficient criterion exactly when the endpoint–path residual vanishes under the locked viewpoint.
+        </p>
       </section>
 
-      <section class="card">
-        <h2>(B) ψ–Δ Framework (package-locked cross-level reporting)</h2>
+      <section class="card" id="paper-b">
+        <h2>(B) The ψ–ΔI→G Framework (package-locked cross-level reporting)</h2>
         <p>
           DOI: <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a><br/>
           Repo: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">github.com/ybing2093-ops/psi-delta-structural-gaps</a>
@@ -95,54 +241,61 @@
 
         <h3>Start here</h3>
         <ul>
-          <li>Read: AUDIT.md (executive summary / checkpoints)</li>
-          <li>Paper (PDF): Zenodo DOI above (canonical archive)</li>
+          <li>Read: Abstract + Sec. 2 (Normative rules: ≈ε and undefinedness), then Sec. 4–5 (V, Ψ, ΔI→G), then Sec. 8 (well-posed reporting / licensed comparisons).</li>
         </ul>
 
-        <h3>One-line core claim</h3>
-        <p class="muted">
-          Cross-level claims require an explicit declaration package; missing clauses imply “undefined” rather than forced continuity across levels.
+        <p class="muted small">
+          Meaning: cross-level quantities are not treated as context-free scalars; well-posedness is locked by a declared package, and missing clauses produce an explicit undefined state.
         </p>
       </section>
     </div>
 
-    <section class="card">
+    <section class="card" id="keywords">
       <h2>Keywords</h2>
       <div>
         <span class="k">coarse-graining</span>
         <span class="k">renormalization group</span>
         <span class="k">relative entropy</span>
         <span class="k">information geometry</span>
-        <span class="k">process vs endpoint</span>
-        <span class="k">cross-level reporting</span>
-        <span class="k">auditability</span>
-        <span class="k">well-posedness</span>
+        <span class="k">endpoint vs path</span>
+        <span class="k">sufficient statistics</span>
+        <span class="k">package-locked reporting</span>
+        <span class="k">≈ε semantics</span>
+        <span class="k">undefinedness gating</span>
+        <span class="k">viewpoint–structure coupling</span>
+        <span class="k">cross-level continuity</span>
+        <span class="k">causal claims</span>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Scope</h2>
+    <section class="card" id="scope">
+      <h2>Scope (claimed / not claimed)</h2>
       <ul>
-        <li><strong>Claimed:</strong> a process-level diagnostic + a reporting protocol that locks assumptions and defines “well-posed vs undefined”.</li>
-        <li><strong>Not claimed:</strong> endpoint agreement alone certifies cross-level equivalence; any gap can always be eliminated by fitting or compute.</li>
+        <li><strong>Claimed:</strong> explicit, reproducible diagnostics that separate endpoint matching from process-level validity under locked specifications (viewpoint/package), with clear validity gates and undefinedness rules when prerequisites are missing; cross-level “continuity/causality” is treated as V-licensed reportability rather than implicit identity.</li>
+        <li><strong>Not claimed:</strong> endpoint agreement alone certifies full process equivalence; cross-level “=” is not treated as ontological identity; proxy quantities are not used outside their declared validity conditions; cross-<code>V</code> comparisons are not assumed without explicit transport/comparability clauses.</li>
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card" id="falsification">
       <h2>Fastest falsification hooks</h2>
       <ul>
-        <li>(A) Provide a case where endpoints match, the diagnostic indicates non-negligible mismatch, yet a declared, licensed reconstruction preserves process-level validity under the stated interface.</li>
-        <li>(B) Provide a fully specified declaration package under which the framework yields contradictions (or prove the “undefined-if-missing-clauses” discipline is inconsistent).</li>
+        <li><strong>(A)</strong> Produce a fixed viewpoint V and a concrete window where endpoints match and the strict criterion predicts a nonzero residual, but show the endpoints remain sufficient statistics for discriminating the compared scale-chain processes under the same V (i.e., violate the equivalence tied to Γpath).</li>
+        <li><strong>(B)</strong> Provide a fully specified declared package V satisfying all required clauses, and show the framework’s licensing discipline (≈ε semantics + undefinedness under missing clauses) yields internal contradictions in reportability/comparability.</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2>Versioning</h2>
-      <ul>
-        <li>Immutable record: cite the Zenodo DOIs above.</li>
-        <li>Executable snapshots: use GitHub Releases in each repo.</li>
-      </ul>
+    <section class="card" id="citation">
+      <h2>Citation</h2>
+      <p class="muted">
+        Please cite the Zenodo DOIs as the immutable record:
+        <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a> and
+        <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a>.
+      </p>
+      <p class="muted small">
+        Tip: add <code>CITATION.cff</code> to each code repository for machine-readable citation metadata.
+      </p>
     </section>
+
   </main>
 
   <footer>
