@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Structural Gaps Project — ψ–Δ Framework & Endpoint–Path Gap Diagnostic</title>
+  <meta name="description" content="Canonical entry for two companion works: (A) relative-entropy endpoint–path gap diagnostic for coarse-graining/RG flows; (B) ψ–Δ framework for package-locked cross-level reporting, auditability, and undefined outputs when clauses are missing." />
+  <link rel="canonical" href="https://ybing2093-ops.github.io/" />
+
+  <meta property="og:title" content="Structural Gaps Project" />
+  <meta property="og:description" content="Canonical entry: DOI, repositories, start-here map, minimal reproduction, scope, falsification hooks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ybing2093-ops.github.io/" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Structural Gaps Project (Canonical Entry)",
+    "about":[
+      "coarse-graining","renormalization group","relative entropy",
+      "information geometry","multi-level systems","structural gaps",
+      "process vs endpoint","auditability","well-posed vs undefined"
+    ],
+    "isBasedOn":[
+      {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18414030"},
+      {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18456597"}
+    ],
+    "codeRepository":[
+      "https://github.com/ybing2093-ops/endpoint-path-gaps-qed",
+      "https://github.com/ybing2093-ops/psi-delta-structural-gaps"
+    ]
+  }
+  </script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; line-height: 1.55; color:#111; }
+    header { padding: 28px 18px; border-bottom: 1px solid #eee; background:#fff; }
+    main { max-width: 980px; margin: 0 auto; padding: 18px; }
+    .card { border: 1px solid #eee; border-radius: 14px; padding: 16px; margin: 14px 0; background:#fff; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+    pre { background: #f6f8fa; border-radius: 10px; padding: 12px; overflow: auto; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #555; }
+    .k { display:inline-block; border:1px solid #eee; border-radius:999px; padding:4px 10px; margin:4px 6px 0 0; background:#fafafa; }
+    footer { padding: 20px 18px; border-top: 1px solid #eee; color:#666; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <main>
+      <h1>Structural Gaps Project</h1>
+      <p class="muted">
+        <strong>Core thesis (30 seconds):</strong><br/>
+        Endpoint agreement is not the same as process-level validity. This project provides
+        (A) a relative-entropy endpoint–path gap diagnostic that exposes process-level mismatch under reduction, and
+        (B) a package-locked cross-level reporting framework (ψ–Δ) that makes “well-posed vs undefined” explicit under declared assumptions.
+      </p>
+      <p class="muted">
+        <strong>Start:</strong> If you want the falsifiable diagnostic, start with (A). If you want the semantic/audit protocol for cross-level claims, start with (B).
+      </p>
+    </main>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>(A) Endpoint–Path Gaps (RG / coarse-graining diagnostic)</h2>
+        <p>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a><br/>
+          Repo: <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">github.com/ybing2093-ops/endpoint-path-gaps-qed</a>
+        </p>
+
+        <h3>Start here</h3>
+        <ul>
+          <li>Read: repo README (Start here) + AUDIT.md (if present)</li>
+          <li>Paper (PDF): Zenodo DOI above (canonical archive)</li>
+        </ul>
+
+        <h3>Minimal reproduction</h3>
+        <pre><code>python run_b1_path2.py
+# expected output: fig_gamma_geo_ci.pdf</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>(B) ψ–Δ Framework (package-locked cross-level reporting)</h2>
+        <p>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a><br/>
+          Repo: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">github.com/ybing2093-ops/psi-delta-structural-gaps</a>
+        </p>
+
+        <h3>Start here</h3>
+        <ul>
+          <li>Read: AUDIT.md (executive summary / checkpoints)</li>
+          <li>Paper (PDF): Zenodo DOI above (canonical archive)</li>
+        </ul>
+
+        <h3>One-line core claim</h3>
+        <p class="muted">
+          Cross-level claims require an explicit declaration package; missing clauses imply “undefined” rather than forced continuity across levels.
+        </p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Keywords</h2>
+      <div>
+        <span class="k">coarse-graining</span>
+        <span class="k">renormalization group</span>
+        <span class="k">relative entropy</span>
+        <span class="k">information geometry</span>
+        <span class="k">process vs endpoint</span>
+        <span class="k">cross-level reporting</span>
+        <span class="k">auditability</span>
+        <span class="k">well-posedness</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Scope</h2>
+      <ul>
+        <li><strong>Claimed:</strong> a process-level diagnostic + a reporting protocol that locks assumptions and defines “well-posed vs undefined”.</li>
+        <li><strong>Not claimed:</strong> endpoint agreement alone certifies cross-level equivalence; any gap can always be eliminated by fitting or compute.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Fastest falsification hooks</h2>
+      <ul>
+        <li>(A) Provide a case where endpoints match, the diagnostic indicates non-negligible mismatch, yet a declared, licensed reconstruction preserves process-level validity under the stated interface.</li>
+        <li>(B) Provide a fully specified declaration package under which the framework yields contradictions (or prove the “undefined-if-missing-clauses” discipline is inconsistent).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Versioning</h2>
+      <ul>
+        <li>Immutable record: cite the Zenodo DOIs above.</li>
+        <li>Executable snapshots: use GitHub Releases in each repo.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <main>
+      <p>Maintained by: ybing2093-ops • Last updated: <span id="d"></span></p>
+      <script>document.getElementById('d').textContent = new Date().toISOString().slice(0,10);</script>
+    </main>
+  </footer>
+</body>
+</html>
