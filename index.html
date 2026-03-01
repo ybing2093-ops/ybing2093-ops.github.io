@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Structural Gaps: V-Locked Diagnostics & ψ–Δ Reporting</title>
-  <meta name="description" content="Canonical entry for two companion works: (A) V-conditioned endpoint–path diagnostics for RG/EFT window validity; (B) ψ–Δ (psi-delta) package-locked reporting semantics for cross-level claims (well-posed vs undefined, resolution-aware ≈ε reporting), with explicit viewpoint–structure coupling." />
+  <title>Structural Gaps: ψ–Δ Framework, V-Locked Diagnostics, and Hierarchical Attention</title>
+  <meta name="description" content="Canonical entry for three linked works: (B) ψ–Δ (psi-delta) package-locked reporting semantics for cross-level claims (well-posed vs undefined, resolution-aware ≈ε reporting); (A) V-conditioned endpoint–path diagnostics for RG/EFT window validity; (C) hierarchical attention as an application in modern sequence/LLM mechanisms via endpoint refinement and fiber-gap reportability." />
   <link rel="canonical" href="https://ybing2093-ops.github.io/" />
 
   <!-- Open Graph / Social preview -->
-  <meta property="og:title" content="Structural Gaps: V-Locked Diagnostics & ψ–Δ Reporting" />
-  <meta property="og:description" content="Canonical entry: DOI, repositories, Start in 60 seconds, foundational positioning (V-locked), minimal definitions (machine anchors), reproducibility, scope, falsification hooks." />
+  <meta property="og:title" content="Structural Gaps: ψ–Δ Framework, V-Locked Diagnostics, and Hierarchical Attention" />
+  <meta property="og:description" content="Canonical entry: DOI, repositories, Start in 60 seconds, V-locked positioning (≈ε, undefinedness), minimal objects (machine anchors), reproducibility, scope, falsification hooks." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ybing2093-ops.github.io/" />
 
@@ -19,20 +19,22 @@
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
-    "name":"Structural Gaps: V-Locked Diagnostics & psi-delta Reporting (Canonical Entry)",
+    "name":"Structural Gaps: psi-delta Framework + V-Locked Diagnostics + Hierarchical Attention (Canonical Entry)",
     "about":[
       "coarse-graining","renormalization group","relative entropy","information geometry",
       "endpoint vs path","sufficient statistics","multi-level systems","package-locked reporting",
       "well-posed vs undefined","resolution-aware equivalence","viewpoint-structure coupling",
-      "cross-level continuity","causal claims","psi-delta"
+      "cross-level continuity","causal claims","psi-delta",
+      "hierarchical attention","sequence modeling","transformers","large language models"
     ],
     "isBasedOn":[
+      {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18456597"},
       {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18414030"},
-      {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18456597"}
+      {"@type":"CreativeWork","identifier":"https://doi.org/10.5281/zenodo.18810251"}
     ],
     "codeRepository":[
-      "https://github.com/ybing2093-ops/endpoint-path-gaps-qed",
-      "https://github.com/ybing2093-ops/psi-delta-structural-gaps"
+      "https://github.com/ybing2093-ops/psi-delta-structural-gaps",
+      "https://github.com/ybing2093-ops/endpoint-path-gaps-qed"
     ]
   }
   </script>
@@ -44,6 +46,7 @@
     .card { border: 1px solid #eee; border-radius: 14px; padding: 16px; margin: 14px 0; background:#fff; }
     .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
     @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1240px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
     pre { background: #f6f8fa; border-radius: 10px; padding: 12px; overflow: auto; }
     code { background: #f6f8fa; border-radius: 8px; padding: 2px 6px; }
     a { text-decoration: none; }
@@ -62,41 +65,49 @@
 <body>
   <header>
     <main>
-      <h1>Structural Gaps: V-Locked Diagnostics & ψ–Δ Reporting</h1>
+      <h1>Structural Gaps: ψ–Δ Reporting, V-Locked Diagnostics, and Hierarchical Attention</h1>
 
       <p class="muted">
         <strong>Core contribution (reader + machine oriented):</strong><br/>
-        Two companion works make cross-level “endpoint looks consistent” a <em>declared, testable</em> statement rather than an implicit assumption.
-        (A) fixes a viewpoint <code>V</code> and defines strict and proxy endpoint–path gaps (<code>Γpath</code>, <code>Γgeo</code>) so endpoint matching on a finite RG/EFT window is licensed <em>iff</em> the endpoint–path residual vanishes under that fixed specification.
-        (B) fixes a declared package <code>V</code> and defines package-locked quantities (<code>Ψ</code>, <code>ΔI→G</code>) together with resolution-aware <code>≈ε</code> semantics and explicit <em>undefinedness</em> when clauses are missing, so cross-level claims are either well-posed under a locked package or explicitly non-licensed.
+        This project treats cross-level “endpoint looks consistent” as a <em>declared, testable</em> statement rather than an implicit assumption.
+        It is organized as: (B) a <em>framework</em> (ψ–Δ) that makes cross-level claims reportable only under a declared package <code>Vpkg</code> with resolution-aware <code>≈ε</code> semantics and explicit <em>undefinedness</em>;
+        (A) a <em>verification case</em> (RG/EFT) that fixes a viewpoint <code>VR</code> and defines strict and proxy endpoint–path gaps (<code>Γpath</code>, <code>Γgeo</code>) so endpoint matching on a finite window is licensed <em>iff</em> the endpoint–path residual vanishes under that locked specification;
+        (C) an <em>application</em> (hierarchical attention / modern sequence models) that instantiates the same discipline via endpoint refinement and fiber-gap reportability.
       </p>
 
       <p class="muted small">
-        <strong>Navigation:</strong> Want the falsifiable RG/EFT diagnostic → start with (A). Want the cross-level reporting discipline (well-posed vs undefined, ≈ε semantics) → start with (B).
+        <strong>Navigation:</strong>
+        Want the framework/spec (≈ε + undefinedness) → start with (B).
+        Want a falsifiable RG/EFT diagnostic under fixed viewpoint → start with (A).
+        Want a modern hierarchical-attention application and transferable test objects → start with (C).
       </p>
     </main>
   </header>
 
   <main>
 
-    <!-- A) Start in 60 seconds -->
+    <!-- Start in 60 seconds -->
     <section class="card" id="start-60-seconds">
       <h2>Start in 60 seconds</h2>
       <ul>
         <li>
-          <strong>Read (A):</strong> Endpoint–Path Gap diagnostic — endpoint matching on a finite window is valid <em>iff</em> the endpoint–path residual vanishes under fixed viewpoint <code>V</code>.
+          <strong>Read (B):</strong> ψ–Δ (psi-delta) framework — cross-level claims are licensed only under a declared package <code>Vpkg</code>;
+          missing clauses ⇒ report <em>undefined</em> (not forced continuity).
+          (<a href="https://doi.org/10.5281/zenodo.18456597">DOI</a>,
+           <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">repo</a>)
+        </li>
+        <li>
+          <strong>Read (A):</strong> Endpoint–Path Gap diagnostic — endpoint matching on a finite window is valid <em>iff</em> the endpoint–path residual vanishes under fixed viewpoint <code>VR</code>.
           (<a href="https://doi.org/10.5281/zenodo.18414030">DOI</a>,
            <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">repo</a>)
         </li>
         <li>
-          <strong>Reproduce:</strong> one command → one key artifact:
+          <strong>Reproduce (A):</strong> one command → one key artifact:
           <code>python run_b1_path2.py</code> → <code>fig_gamma_geo_ci.pdf</code>.
         </li>
         <li>
-          <strong>Read (B):</strong> ψ–Δ (psi-delta) framework — cross-level claims are licensed only under a declared package <code>V</code>;
-          missing clauses ⇒ report <em>undefined</em> (not forced continuity).
-          (<a href="https://doi.org/10.5281/zenodo.18456597">DOI</a>,
-           <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">repo</a>)
+          <strong>Read (C):</strong> Why Hierarchical Attention Works — endpoint refinement / fiber-gap formulation for hierarchical mechanisms in modern sequence/LLM models.
+          (<a href="https://doi.org/10.5281/zenodo.18810251">DOI</a>)
         </li>
       </ul>
     </section>
@@ -108,46 +119,46 @@
       <p class="muted">
         <strong>Operational reformulation:</strong>
         this project reframes cross-level “causal” and “continuity” claims as <em>reporting-licensed</em> objects.
-        A cross-level statement is meaningful only under a declared specification package <code>V</code> (interface, admissible reconstructions, discrepancy rule, domain/reachability, and reporting threshold).
+        A cross-level statement is meaningful only under a declared specification package <code>Vpkg</code> (interface, admissible reconstructions, discrepancy rule, domain/reachability, and reporting threshold).
         If required clauses are not declared, the correct output state is <strong>undefined</strong>, not a forced value.
       </p>
 
       <p class="muted">
         <strong>Viewpoint–structure coupling:</strong>
         all reported structural quantities are <code>V</code>-conditioned.
-        Changing <code>V</code> changes what is comparable and what is reportable; cross-<code>V</code> comparisons require explicit comparability/transport clauses.
+        Changing the declared package/viewpoint changes what is comparable and what is reportable; cross-<code>V</code> comparisons require explicit comparability/transport clauses.
         Without such clauses, numerical comparison is non-licensed (undefined).
       </p>
 
       <p class="muted">
         <strong>Δ as the cross-level structural term:</strong>
-        <code>Δ</code> is used to denote a residual/structural coupling between levels (e.g., macro description vs micro mechanism; deterministic reporting vs probabilistic behavior) under the declared package <code>V</code>.
+        <code>Δ</code> denotes a residual/structural coupling between levels (e.g., macro description vs micro mechanism; deterministic reporting vs probabilistic behavior) under the declared package <code>V</code>.
         Whether <code>ψ</code> and <code>Δ</code> are reported as “≈0” or “&gt;0” is always relative to the chosen <strong>resolution / reporting convention</strong>;
         “≈0” means “below the declared resolution,” and does not denote ontological identity.
       </p>
     </section>
 
-    <!-- B) Minimal objects -->
+    <!-- Minimal objects -->
     <section class="card" id="minimal-objects">
       <h2>Minimal objects (machine-readable anchors)</h2>
       <p class="muted">
-        One-sentence anchors for retrieval/citation. Terms are used as defined in the companion works (A) and (B).
-        Note: both papers use a symbol <code>V</code>, but with different roles (RG/EFT viewpoint vs ψ–Δ package).
+        One-sentence anchors for retrieval/citation. Terms are used as defined in the linked works.
+        Note: <code>VR</code> denotes the RG/EFT viewpoint in (A), while <code>Vpkg</code> denotes the declared package in (B) and (C).
       </p>
 
       <h3>Anchors from (A) Endpoint–Path Gaps</h3>
       <dl>
-        <dt><code>Viewpoint V (RG/EFT)</code></dt>
-        <dd>A fully specified analysis setting that locks interface/protocol, regulator/scheme and threshold conventions, model class and reconstruction, divergence functional, and aggregation; all reported gaps are V-conditioned.</dd>
+        <dt><code>Viewpoint VR (RG/EFT)</code></dt>
+        <dd>A fully specified analysis setting that locks interface/protocol, regulator/scheme and threshold conventions, model class and reconstruction, divergence functional, and aggregation; all reported gaps are VR-conditioned.</dd>
 
         <dt><code>Δpath</code></dt>
-        <dd>The strict path-process divergence (full-trajectory divergence) between two V-induced scale-chain process objects.</dd>
+        <dd>The strict path-process divergence (full-trajectory divergence) between two VR-induced scale-chain process objects.</dd>
 
         <dt><code>Δpair</code></dt>
         <dd>The strict endpoint-pair marginal divergence induced by retaining only the endpoint joint variable <code>E=(Y0,YN)</code> from the path object.</dd>
 
         <dt><code>Γpath</code></dt>
-        <dd>The strict endpoint–path residual in the decomposition <code>Δpath = Δpair + Γpath</code>, with <code>Γpath ≥ 0</code>; <code>Γpath = 0</code> is the sharp endpoint sufficiency criterion under fixed V.</dd>
+        <dd>The strict endpoint–path residual in the decomposition <code>Δpath = Δpair + Γpath</code>, with <code>Γpath ≥ 0</code>; <code>Γpath = 0</code> is the sharp endpoint sufficiency criterion under fixed VR.</dd>
 
         <dt><code>Route I: ΔI</code></dt>
         <dd>The viewpoint-locked endpoint divergence constructed by aggregating interface-readable endpoint discrepancies; distinct from <code>Δpair</code> unless explicitly aligned by implementation choice.</dd>
@@ -166,13 +177,13 @@
 
       <h3>Anchors from (B) ψ–Δ Reporting</h3>
       <dl>
-        <dt><code>Declared package V (ψ–Δ)</code></dt>
+        <dt><code>Declared package Vpkg (ψ–Δ)</code></dt>
         <dd>An audit bundle that locks boundary/reachability, designated cross-level maps, discrepancy rule, admissible reconstructions, reporting threshold <code>ε</code>, and (when invoked) comparability/transport and audit clauses.</dd>
 
-        <dt><code>Ψ(L,A;V)</code></dt>
+        <dt><code>Ψ(L,A;Vpkg)</code></dt>
         <dd>Intra-level structural frustration index: the infimum of a declared nonnegative conflict functional over the declared reachable set under the locked package.</dd>
 
-        <dt><code>ΔI→G(L;V)</code></dt>
+        <dt><code>ΔI→G(L;Vpkg)</code></dt>
         <dd>Fixed-slice cross-level residual: minimax mismatch remaining after compressing to a global description and reconstructing via the declared admissible lifting class under the declared discrepancy rule.</dd>
 
         <dt><code>≈ε</code></dt>
@@ -186,15 +197,26 @@
 
         <dt><code>Viewpoint–structure coupling</code></dt>
         <dd>Structural quantities are defined only relative to a declared package/viewpoint; changing the package changes reportability and comparability, and cross-package comparison requires explicit transport/comparability clauses.</dd>
+      </dl>
 
-        <dt><code>Cross-level continuity (licensed)</code></dt>
-        <dd>“Continuity across levels” means <code>≈ε</code>-indistinguishability under a declared package <code>V</code>; it is not a claim of ontological identity.</dd>
+      <hr/>
 
-        <dt><code>Causal claim (V-locked)</code></dt>
-        <dd>A cross-level “causal” statement is reportable only if the intervention/identification interface and admissible reconstructions are declared in <code>V</code>; otherwise it is undefined.</dd>
+      <h3>Anchors from (C) Hierarchical Attention (application)</h3>
+      <dl>
+        <dt><code>Endpoint map End</code></dt>
+        <dd>A declared summary/endpoint mapping that partitions histories into fibers; it is treated as a Vpkg-locked reporting object (not an implicit sufficiency assumption).</dd>
 
-        <dt><code>Δ as cross-level structural term</code></dt>
-        <dd><code>Δ</code> denotes the residual structural coupling between macro and micro (or deterministic reporting and probabilistic behavior) under declared <code>V</code>; reporting “<code>Δ≈0</code>” means “below the declared resolution,” not “<code>Δ=0</code>” in an ontological sense.</dd>
+        <dt><code>Fiber End⁻¹(e)</code></dt>
+        <dd>The set of micro-histories/hypotheses mapped to the same endpoint value <code>e</code>; fiber structure is the unit of “hidden variability under the same summary”.</dd>
+
+        <dt><code>GapTV(End;C)</code></dt>
+        <dd>A total-variation gap measuring the worst-case (or constrained worst-case) mismatch between predictive objects inside the same fiber under declared constraints <code>C</code>.</dd>
+
+        <dt><code>Endpoint refinement</code></dt>
+        <dd>A strict refinement makes fibers smaller; in the declared setting, refinement is used to control/report gap (typically non-increasing under refinement when the comparison protocol is fixed).</dd>
+
+        <dt><code>Capacity lower bound / packing witness</code></dt>
+        <dd>A witness mechanism showing that if endpoint capacity is insufficient for a task class, a positive gap is unavoidable (reportable as a lower bound under Vpkg).</dd>
       </dl>
 
       <details class="small" style="margin-top:12px;">
@@ -208,8 +230,25 @@
       </details>
     </section>
 
-    <!-- Two main cards -->
+    <!-- Three main cards -->
     <div class="grid">
+      <section class="card" id="paper-b">
+        <h2>(B) The ψ–ΔI→G Framework (package-locked cross-level reporting)</h2>
+        <p>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a><br/>
+          Repo: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">github.com/ybing2093-ops/psi-delta-structural-gaps</a>
+        </p>
+
+        <h3>Start here</h3>
+        <ul>
+          <li>Read: Abstract + Sec. 2 (Normative rules: ≈ε and undefinedness), then Sec. 4–5 (V, Ψ, ΔI→G), then Sec. 8 (well-posed reporting / licensed comparisons).</li>
+        </ul>
+
+        <p class="muted small">
+          Meaning: cross-level quantities are not treated as context-free scalars; well-posedness is locked by a declared package, and missing clauses produce an explicit undefined state.
+        </p>
+      </section>
+
       <section class="card" id="paper-a">
         <h2>(A) Relative-Entropy Endpoint–Path Gaps (RG/EFT diagnostic)</h2>
         <p>
@@ -232,20 +271,19 @@
         </p>
       </section>
 
-      <section class="card" id="paper-b">
-        <h2>(B) The ψ–ΔI→G Framework (package-locked cross-level reporting)</h2>
+      <section class="card" id="paper-c">
+        <h2>(C) Why Hierarchical Attention Works (application to modern sequence/LLM mechanisms)</h2>
         <p>
-          DOI: <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a><br/>
-          Repo: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">github.com/ybing2093-ops/psi-delta-structural-gaps</a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a>
         </p>
 
         <h3>Start here</h3>
         <ul>
-          <li>Read: Abstract + Sec. 2 (Normative rules: ≈ε and undefinedness), then Sec. 4–5 (V, Ψ, ΔI→G), then Sec. 8 (well-posed reporting / licensed comparisons).</li>
+          <li>Read: Abstract + the definitions of endpoint/fiber/gap; then the main monotonicity/refinement statement and the capacity/lower-bound witness section.</li>
         </ul>
 
         <p class="muted small">
-          Meaning: cross-level quantities are not treated as context-free scalars; well-posedness is locked by a declared package, and missing clauses produce an explicit undefined state.
+          Meaning: hierarchical mechanisms are treated as endpoint refinements that control/report fiber-level gaps under a declared package, producing transferable test objects (not informal “it feels more expressive” claims).
         </p>
       </section>
     </div>
@@ -256,17 +294,22 @@
         <span class="k">V-locked</span>
         <span class="k">psi-delta</span>
         <span class="k">cross-level reporting</span>
+        <span class="k">≈ε semantics</span>
+        <span class="k">undefinedness gating</span>
+        <span class="k">viewpoint–structure coupling</span>
         <span class="k">coarse-graining</span>
         <span class="k">renormalization group</span>
         <span class="k">relative entropy</span>
         <span class="k">information geometry</span>
         <span class="k">endpoint vs path</span>
         <span class="k">sufficient statistics</span>
-        <span class="k">≈ε semantics</span>
-        <span class="k">undefinedness gating</span>
-        <span class="k">viewpoint–structure coupling</span>
-        <span class="k">cross-level continuity</span>
-        <span class="k">causal claims</span>
+        <span class="k">hierarchical attention</span>
+        <span class="k">transformers</span>
+        <span class="k">LLMs</span>
+        <span class="k">endpoint refinement</span>
+        <span class="k">fiber gap</span>
+        <span class="k">total variation</span>
+        <span class="k">capacity lower bounds</span>
       </div>
     </section>
 
@@ -281,26 +324,27 @@
     <section class="card" id="falsification">
       <h2>Fastest falsification hooks</h2>
       <ul>
-        <li><strong>(A)</strong> Produce a fixed viewpoint V and a concrete window where endpoints match and the strict criterion predicts a nonzero residual, but show the endpoints remain sufficient statistics for discriminating the compared scale-chain processes under the same V (i.e., violate the equivalence tied to Γpath).</li>
-        <li><strong>(B)</strong> Provide a fully specified declared package V satisfying all required clauses, and show the framework’s licensing discipline (≈ε semantics + undefinedness under missing clauses) yields internal contradictions in reportability/comparability.</li>
+        <li><strong>(A)</strong> Produce a fixed viewpoint VR and a concrete window where endpoints match and the strict criterion predicts a nonzero residual, but show the endpoints remain sufficient statistics for discriminating the compared scale-chain processes under the same VR (i.e., violate the equivalence tied to Γpath).</li>
+        <li><strong>(B)</strong> Provide a fully specified declared package Vpkg satisfying all required clauses, and show the framework’s licensing discipline (≈ε semantics + undefinedness under missing clauses) yields internal contradictions in reportability/comparability.</li>
+        <li><strong>(C)</strong> Under a fully declared package, exhibit a refinement that strictly shrinks fibers yet provably increases the declared gap (contradicting the stated refinement-to-gap control claim under fixed comparison protocol), or show a capacity lower-bound witness that fails under the declared constraints.</li>
       </ul>
     </section>
 
-   <section class="card" id="citation">
-  <h2>Citation</h2>
-  <p class="muted">
-    Please cite the Zenodo DOIs as the immutable record:
-    <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a> and
-    <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a>.
-  </p>
-  </section>
+    <section class="card" id="citation">
+      <h2>Citation</h2>
+      <p class="muted">
+        Please cite the Zenodo DOIs as the immutable record:
+        <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a>,
+        <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a>, and
+        <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a>.
+      </p>
+    </section>
 
   </main>
 
   <footer>
     <main>
-      <p>Maintained by: ybing2093-ops • Last updated: <span id="d"></span></p>
-      <script>document.getElementById('d').textContent = new Date().toISOString().slice(0,10);</script>
+      <p>Maintained by: ybing2093-ops • Last updated: <strong>2026-03-01</strong></p>
     </main>
   </footer>
 </body>
