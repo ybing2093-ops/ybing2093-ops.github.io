@@ -70,7 +70,7 @@
 
       <p class="muted">
         <strong>Core contribution (reader + machine oriented):</strong><br/>
-        This project treats cross-level “endpoint looks consistent” as a <em>declared, testable</em> statement rather than an implicit assumption.
+        This project treats cross-level “a coarse report looks consistent” as a <em>declared, testable</em> statement rather than an implicit assumption.
         It is organized as: (B) a <em>framework</em> (ψ–Δ) that makes cross-level claims reportable only under a declared package <code>Vpkg</code> with resolution-aware <code>≈ε</code> semantics and explicit <em>undefinedness</em>;
         (A) a <em>verification case</em> (RG/EFT) that fixes a viewpoint <code>VR</code> and defines strict and proxy endpoint–path gaps (<code>Γpath</code>, <code>Γgeo</code>) so endpoint matching on a finite window is licensed <em>iff</em> the endpoint–path residual vanishes under that locked specification;
         (C) an <em>application</em> (hierarchical attention / modern sequence models) that instantiates the same discipline via endpoint refinement and fiber-gap reportability.
@@ -127,16 +127,17 @@
 
       <p class="muted">
         <strong>Viewpoint–structure coupling:</strong>
-        all reported structural quantities are <code>V</code>-conditioned.
+        all reported structural quantities are conditioned on a declared <code>V</code> (either the RG/EFT viewpoint <code>VR</code> in (A), or the declared package <code>Vpkg</code> in (B) and (C)).
         Changing the declared package/viewpoint changes what is comparable and what is reportable; cross-<code>V</code> comparisons require explicit comparability/transport clauses.
         Without such clauses, numerical comparison is non-licensed (undefined).
       </p>
 
       <p class="muted">
         <strong>Δ as the cross-level structural term:</strong>
-        <code>Δ</code> denotes a residual/structural coupling between levels (e.g., macro description vs micro mechanism; deterministic reporting vs probabilistic behavior) under the declared package <code>V</code>.
-        Whether <code>ψ</code> and <code>Δ</code> are reported as “≈0” or “&gt;0” is always relative to the chosen <strong>resolution / reporting convention</strong>;
+        <code>Δ</code> denotes a residual/structural coupling between levels under a declared package <code>Vpkg</code>.
+        Whether <code>Ψ</code> and <code>Δ</code> are reported as “≈0” or “&gt;0” is always relative to the chosen <strong>resolution / reporting convention</strong>;
         “≈0” means “below the declared resolution,” and does not denote ontological identity.
+        Here <code>Δ</code> is generic; concrete instances include <code>ΔI→G(L;Vpkg)</code> in (B), and <code>Δpath</code>/<code>Δpair</code>/<code>ΔI</code> in (A) under <code>VR</code>.
       </p>
     </section>
 
@@ -166,7 +167,10 @@
         <dd>The viewpoint-locked endpoint divergence constructed by aggregating interface-readable endpoint discrepancies; distinct from <code>Δpair</code> unless explicitly aligned by implementation choice.</dd>
 
         <dt><code>Route II: Ψ, LII</code></dt>
-        <dd>Information speed <code>Ψ</code> and accumulated path length <code>LII=∫Ψ dγ</code> induced from a local second-order expansion under declared validity conditions (e.g. geometry-enabled window conditions).</dd>
+        <dd>
+          Information speed <code>Ψ</code> and accumulated path length <code>LII=∫Ψ dγ</code> induced from a local second-order expansion under declared validity conditions (e.g. geometry-enabled window conditions).
+          <span class="muted small"><strong>Notation:</strong> this Route-II <code>Ψ</code> in (A) is not the same object as <code>Ψ(L,A;Vpkg)</code> in (B).</span>
+        </dd>
 
         <dt><code>dend</code></dt>
         <dd>The endpoint distance induced by the same Route-II structure (distance between endpoints under the induced geometry), used to compare endpoints vs trajectory under a unified length scale.</dd>
@@ -211,8 +215,8 @@
         <dt><code>Fiber End⁻¹(e)</code></dt>
         <dd>The set of micro-histories/hypotheses mapped to the same endpoint value <code>e</code>; fiber structure is the unit of “hidden variability under the same summary”.</dd>
 
-        <dt><code>GapTV(End;C)</code></dt>
-        <dd>A total-variation gap measuring the worst-case (or constrained worst-case) mismatch between predictive objects inside the same fiber under declared constraints <code>C</code>.</dd>
+        <dt><code>Gap(End;C)</code></dt>
+        <dd>A declared gap measuring the worst-case (or constrained worst-case) mismatch between predictive objects inside the same fiber under declared constraints <code>C</code> (total variation by default in (C)).</dd>
 
         <dt><code>Endpoint refinement</code></dt>
         <dd>A strict refinement makes fibers smaller; in the declared setting, refinement is used to control/report gap (typically non-increasing under refinement when the comparison protocol is fixed).</dd>
@@ -276,7 +280,7 @@
       <section class="card" id="paper-c">
         <h2>(C) Why Hierarchical Attention Works (application to modern sequence/LLM mechanisms)</h2>
         <p>
-          DOI: <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a><br/>
           Repo: <a href="https://github.com/ybing2093-ops/why-hierarchical-attention-works">github.com/ybing2093-ops/why-hierarchical-attention-works</a>
         </p>
 
