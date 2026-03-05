@@ -1,0 +1,159 @@
+<!-- /papers/psi-delta.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Psi–Delta Framework: Structural Gaps for Cross-Level Reporting</title>
+  <meta name="description" content="Zihe Zhao. ψ–Δ (Psi–Delta) framework: package-locked (Vpkg) cross-level reporting semantics—≈ε reporting equivalence, admissible reconstructions, discrepancy rules, domain gating, and explicit undefinedness when clauses are missing." />
+  <link rel="canonical" href="https://ybing2093-ops.github.io/papers/psi-delta.html" />
+
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="author" content="Zihe Zhao" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Psi–Delta Framework: Structural Gaps for Cross-Level Reporting" />
+  <meta property="og:description" content="Package-locked cross-level reporting (Vpkg): ≈ε semantics, admissible reconstructions, discrepancy rules, domain gating, explicit undefinedness." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ybing2093-ops.github.io/papers/psi-delta.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Highwire / Scholar-style meta (no fake PDF URL) -->
+  <meta name="citation_title" content="The Psi–Delta Framework: Structural Gaps for Cross-Level Reporting" />
+  <meta name="citation_author" content="Zihe Zhao" />
+  <meta name="citation_publication_date" content="2026" />
+  <meta name="citation_doi" content="10.5281/zenodo.18456597" />
+  <meta name="citation_fulltext_html_url" content="https://ybing2093-ops.github.io/papers/psi-delta.html" />
+  <meta name="citation_language" content="en" />
+  <!-- If you host the PDF on this site later, add:
+       <meta name="citation_pdf_url" content="https://ybing2093-ops.github.io/papers/psi-delta.pdf" />
+  -->
+
+  <!-- Schema.org: ScholarlyArticle -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"The Psi–Delta Framework: Structural Gaps for Cross-Level Reporting",
+    "author":{
+      "@type":"Person",
+      "name":"Zihe Zhao",
+      "identifier":"https://orcid.org/0009-0008-4692-4408"
+    },
+    "url":"https://ybing2093-ops.github.io/papers/psi-delta.html",
+    "identifier":"https://doi.org/10.5281/zenodo.18456597",
+    "isPartOf":{"@type":"WebSite","name":"Structural Gaps — Canonical Entry","url":"https://ybing2093-ops.github.io/"},
+    "about":[
+      "cross-level reporting","package-locked semantics","resolution-aware equivalence",
+      "undefinedness gating","admissible reconstructions","discrepancy rule",
+      "multi-level systems","coarse descriptions vs micro mechanisms"
+    ]
+  }
+  </script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; line-height: 1.55; color:#111; }
+    header { padding: 24px 18px; border-bottom: 1px solid #eee; background:#fff; }
+    main { max-width: 980px; margin: 0 auto; padding: 18px; }
+    .card { border: 1px solid #eee; border-radius: 14px; padding: 16px; margin: 14px 0; background:#fff; }
+    .muted { color: #555; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, pre { background: #f6f8fa; border-radius: 10px; }
+    code { padding: 2px 6px; }
+    pre { padding: 12px; overflow:auto; }
+    .small { font-size: 0.95em; }
+    .k { display:inline-block; border:1px solid #eee; border-radius:999px; padding:4px 10px; margin:4px 6px 0 0; background:#fafafa; }
+    dl { margin: 0; }
+    dt { margin-top: 10px; font-weight: 700; }
+    dd { margin-left: 0; margin-top: 4px; color:#222; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <main>
+      <p class="muted small">
+        <a href="/papers/">Papers index</a> · <a href="/">Canonical entry</a>
+      </p>
+
+      <h1>The Psi–Delta Framework: Structural Gaps for Cross-Level Reporting</h1>
+
+      <p class="muted">
+        Author: <a href="https://orcid.org/0009-0008-4692-4408">Zihe Zhao</a> · Year: 2026<br/>
+        DOI (immutable record): <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a><br/>
+        Code repository: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">github.com/ybing2093-ops/psi-delta-structural-gaps</a>
+      </p>
+    </main>
+  </header>
+
+  <main>
+    <section class="card" aria-label="tldr">
+      <h2>TL;DR (what I did)</h2>
+      <ul>
+        <li>I fixed a reporting discipline for cross-level claims by requiring a declared package <code>Vpkg</code> (interface, admissible reconstructions, discrepancy rule, reachability/domain gates, and thresholds).</li>
+        <li>I defined resolution-aware reporting equivalence <code>≈ε</code> and an explicit <em>undefined</em> output state when required clauses are missing (no forced continuity).</li>
+        <li>I formalized ψ/Δ as package-conditioned structural quantities and separated “reporting ≈0” from ontological identity (≈0 means “below declared resolution”).</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="abstract">
+      <h2>Abstract (plain text)</h2>
+      <p>
+        This work formalizes cross-level statements (e.g., “a coarse report matches the micro system”, “a cross-scale identification is continuous”) as
+        package-licensed outputs rather than default assumptions. A claim is reportable only under a declared specification package <code>Vpkg</code>
+        that locks the comparison interface, admissible reconstructions, discrepancy rule, domain/reachability, and the reporting threshold <code>ε</code>.
+        If required clauses are absent, the correct output is <em>undefined</em>, not a forced numerical surrogate. The framework provides operational
+        <code>≈ε</code> semantics for equality/continuity claims and introduces package-conditioned structural terms (ψ/Δ) to track residual cross-level
+        mismatch under the declared reporting discipline.
+      </p>
+    </section>
+
+    <section class="card" aria-label="minimal-objects">
+      <h2>Minimal objects (anchors for machines and readers)</h2>
+      <dl>
+        <dt><code>Vpkg</code> (declared package)</dt>
+        <dd>Audit bundle: interface, admissible reconstructions/lifts, discrepancy rule, reachability/domain gates, reporting threshold <code>ε</code>, and (when needed) transport/comparability clauses.</dd>
+
+        <dt><code>≈ε</code> (resolution-aware reporting equivalence)</dt>
+        <dd>Operational indistinguishability at threshold <code>ε</code> under the locked package; not an ontological identity claim.</dd>
+
+        <dt><code>Undefined</code> (non-licensing output)</dt>
+        <dd>If required clauses are missing (or cross-package transport is not declared), the correct state is “undefined” (comparison is non-licensed).</dd>
+
+        <dt><code>Ψ(L,A;Vpkg)</code></dt>
+        <dd>Package-conditioned intra-level structural index (defined exactly in the paper).</dd>
+
+        <dt><code>ΔI→G(L;Vpkg)</code></dt>
+        <dd>Package-conditioned cross-level residual after compressing and reconstructing under the declared admissibility and discrepancy rule.</dd>
+      </dl>
+    </section>
+
+    <section class="card" aria-label="links">
+      <h2>Links</h2>
+      <ul>
+        <li>DOI: <a href="https://doi.org/10.5281/zenodo.18456597">10.5281/zenodo.18456597</a></li>
+        <li>Repository: <a href="https://github.com/ybing2093-ops/psi-delta-structural-gaps">psi-delta-structural-gaps</a></li>
+        <li>Project canonical entry: <a href="/">https://ybing2093-ops.github.io/</a></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="keywords">
+      <h2>Keywords</h2>
+      <div>
+        <span class="k">ψ–Δ</span>
+        <span class="k">Vpkg</span>
+        <span class="k">cross-level reporting</span>
+        <span class="k">≈ε semantics</span>
+        <span class="k">undefinedness gating</span>
+        <span class="k">admissible reconstructions</span>
+      </div>
+    </section>
+
+    <p class="muted small">Last updated: 2026-03-01</p>
+  </main>
+</body>
+</html>
