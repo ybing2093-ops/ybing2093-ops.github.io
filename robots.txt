@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ybing2093-ops.github.io/sitemap.xml
