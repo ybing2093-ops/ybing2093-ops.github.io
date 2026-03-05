@@ -1,72 +1,53 @@
-<!-- /papers/hierarchical-attention.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Why Hierarchical Attention Works</title>
-  <meta name="description" content="Zihe Zhao. Formalizes hierarchical attention via endpoint maps, fibers, and gaps. Treats hierarchy as endpoint refinement and provides checkable witnesses/lower bounds for positive gap under insufficient endpoint capacity, under declared comparison protocols." />
+  <title>Why Hierarchical Attention Works: A Declared-Package Fiber-Diameter Diagnostic</title>
+  <meta name="description" content="Zihe Zhao. Declared-package V=(I,ε,Q,C) diagnostic for hierarchical/multi-scale attention via endpoint maps, fibers, fiber diameters, and global gaps; refinement monotonicity and capacity lower bounds; LLM interpretation via predictive interface Π." />
   <link rel="canonical" href="https://ybing2093-ops.github.io/papers/hierarchical-attention.html" />
-
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <meta name="author" content="Zihe Zhao" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Why Hierarchical Attention Works" />
-  <meta property="og:description" content="Endpoint / fiber / gap objects for hierarchical mechanisms in modern sequence & LLM models; endpoint refinement and checkable witnesses/lower bounds." />
+  <meta property="og:title" content="Why Hierarchical Attention Works: A Declared-Package Fiber-Diameter Diagnostic" />
+  <meta property="og:description" content="Endpoint/fiber/gap objects; refinement monotonicity; capacity lower bounds; modern sequence/LLM mechanisms under declared package V." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://ybing2093-ops.github.io/papers/hierarchical-attention.html" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
 
-  <!-- Highwire / Scholar-style meta (no fake PDF URL) -->
-  <meta name="citation_title" content="Why Hierarchical Attention Works" />
+  <meta name="citation_title" content="Why Hierarchical Attention Works: A Declared-Package Fiber-Diameter Diagnostic" />
   <meta name="citation_author" content="Zihe Zhao" />
   <meta name="citation_publication_date" content="2026" />
   <meta name="citation_doi" content="10.5281/zenodo.18810251" />
   <meta name="citation_fulltext_html_url" content="https://ybing2093-ops.github.io/papers/hierarchical-attention.html" />
+  <meta name="citation_pdf_url" content="https://ybing2093-ops.github.io/papers/Why_Hierarchical_Attention_Works.pdf" />
   <meta name="citation_language" content="en" />
-  <!-- If you host the PDF on this site later, add:
-       <meta name="citation_pdf_url" content="https://ybing2093-ops.github.io/papers/why-hierarchical-attention-works.pdf" />
-  -->
 
-  <!-- Schema.org: ScholarlyArticle -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"ScholarlyArticle",
-    "name":"Why Hierarchical Attention Works",
-    "author":{
-      "@type":"Person",
-      "name":"Zihe Zhao",
-      "identifier":"https://orcid.org/0009-0008-4692-4408"
-    },
+    "name":"Why Hierarchical Attention Works: A Declared-Package Fiber-Diameter Diagnostic",
+    "author":{"@type":"Person","name":"Zihe Zhao","identifier":"https://orcid.org/0009-0008-4692-4408"},
     "url":"https://ybing2093-ops.github.io/papers/hierarchical-attention.html",
     "identifier":"https://doi.org/10.5281/zenodo.18810251",
-    "isPartOf":{"@type":"WebSite","name":"Structural Gaps — Canonical Entry","url":"https://ybing2093-ops.github.io/"},
-    "about":[
-      "hierarchical attention","sequence modeling","transformers","large language models",
-      "summarization maps","sufficient statistics","fibers","gaps","endpoint refinement",
-      "total variation","capacity lower bounds"
-    ]
+    "encoding":{"@type":"MediaObject","fileFormat":"application/pdf","contentUrl":"https://ybing2093-ops.github.io/papers/Why_Hierarchical_Attention_Works.pdf"},
+    "sameAs":["https://github.com/ybing2093-ops/why-hierarchical-attention-works"],
+    "isPartOf":{"@type":"WebSite","name":"Structural Gaps — Canonical Entry","url":"https://ybing2093-ops.github.io/"}
   }
   </script>
 
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; line-height: 1.55; color:#111; }
-    header { padding: 24px 18px; border-bottom: 1px solid #eee; background:#fff; }
+    header { padding: 22px 18px; border-bottom: 1px solid #eee; background:#fff; }
     main { max-width: 980px; margin: 0 auto; padding: 18px; }
     .card { border: 1px solid #eee; border-radius: 14px; padding: 16px; margin: 14px 0; background:#fff; }
     .muted { color: #555; }
     a { text-decoration: none; }
     a:hover { text-decoration: underline; }
-    code, pre { background: #f6f8fa; border-radius: 10px; }
-    code { padding: 2px 6px; }
-    pre { padding: 12px; overflow:auto; }
     .small { font-size: 0.95em; }
-    .k { display:inline-block; border:1px solid #eee; border-radius:999px; padding:4px 10px; margin:4px 6px 0 0; background:#fafafa; }
+    code { background: #f6f8fa; border-radius: 8px; padding: 2px 6px; }
     dl { margin: 0; }
     dt { margin-top: 10px; font-weight: 700; }
     dd { margin-left: 0; margin-top: 4px; color:#222; }
@@ -76,80 +57,49 @@
 <body>
   <header>
     <main>
-      <p class="muted small">
-        <a href="/papers/">Papers index</a> · <a href="/">Canonical entry</a>
-      </p>
-
-      <h1>Why Hierarchical Attention Works</h1>
-
+      <p class="muted small"><a href="/papers/">Papers index</a> · <a href="/">Canonical entry</a></p>
+      <h1>Why Hierarchical Attention Works: A Declared-Package Fiber-Diameter Diagnostic</h1>
       <p class="muted">
-        Author: <a href="https://orcid.org/0009-0008-4692-4408">Zihe Zhao</a> · Year: 2026<br/>
-        DOI (immutable record): <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a><br/>
-        Code repository: <a href="https://github.com/ybing2093-ops/why-hierarchical-attention-works">github.com/ybing2093-ops/why-hierarchical-attention-works</a>
+        Author: <a href="https://orcid.org/0009-0008-4692-4408">Zihe Zhao</a><br/>
+        PDF: <a href="Why_Hierarchical_Attention_Works.pdf">Why_Hierarchical_Attention_Works.pdf</a><br/>
+        DOI: <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a><br/>
+        Repo: <a href="https://github.com/ybing2093-ops/why-hierarchical-attention-works">why-hierarchical-attention-works</a>
       </p>
     </main>
   </header>
 
   <main>
-    <section class="card" aria-label="tldr">
-      <h2>TL;DR (what I did)</h2>
+    <section class="card">
+      <h2>What I did (machine-first)</h2>
       <ul>
-        <li>I formalized hierarchical attention using three objects: an endpoint map (<code>End</code>), fibers (<code>End⁻¹(e)</code>), and a gap functional (<code>Gap(End;C)</code>) under declared constraints <code>C</code>.</li>
-        <li>I treated hierarchy as <em>endpoint refinement</em> (making fibers smaller) and stated refinement-to-gap control under a fixed comparison protocol.</li>
-        <li>I provided witness/lower-bound mechanisms: if endpoint capacity is insufficient for a task class, a positive gap is unavoidable (reportable under the declared protocol).</li>
+        <li>I fixed a declared package <code>V=(I,ε,Q,C)</code> that locks the predictive interface <code>Π</code>, reportable discrepancy (<code>TV</code> by default), admissible history class <code>C</code>, and threshold <code>ε</code>.</li>
+        <li>I defined endpoint maps <code>End:H→E</code>, fibers <code>Fib(e)=End⁻¹(e)</code>, fiber diameters, and the global gap <code>GapD(End;C)=sup_e DiamD(e;C)</code>.</li>
+        <li>I treated hierarchical mechanisms as endpoint families and refinement; refinement implies non-increasing gaps under a fixed protocol.</li>
+        <li>I gave a capacity obstruction (packing-type lower bounds): if endpoint capacity is insufficient, a positive gap is unavoidable.</li>
       </ul>
     </section>
 
-    <section class="card" aria-label="abstract">
-      <h2>Abstract (plain text)</h2>
-      <p>
-        This work rewrites “hierarchical attention works” into a checkable statement by fixing a summary/endpoint mapping and measuring what it hides.
-        An endpoint map partitions histories into fibers; within each fiber, distinct micro-histories can still induce different predictive objects.
-        The paper defines a gap functional over fibers (with a declared comparison protocol and constraints), and models hierarchical mechanisms as endpoint refinements.
-        Refinement changes fiber geometry and controls/report gaps. Capacity lower bounds and explicit witnesses are provided to certify that a positive gap must persist when the endpoint map is insufficient for a target class.
-      </p>
-    </section>
-
-    <section class="card" aria-label="minimal-objects">
-      <h2>Minimal objects (anchors for machines and readers)</h2>
+    <section class="card">
+      <h2>Minimal objects (anchors)</h2>
       <dl>
-        <dt><code>End</code> (endpoint map)</dt>
-        <dd>Declared summary mapping from histories to endpoints; treated as a reporting object rather than an implicit sufficiency assumption.</dd>
-
-        <dt><code>End⁻¹(e)</code> (fiber)</dt>
-        <dd>Set of micro-histories mapped to the same endpoint <code>e</code>; fiber structure is the unit of “hidden variability under the same summary”.</dd>
-
-        <dt><code>Gap(End;C)</code></dt>
-        <dd>Declared mismatch measure over fibers under constraints <code>C</code> and a fixed comparison protocol (total variation by default in the paper).</dd>
-
+        <dt><code>V=(I,ε,Q,C)</code></dt>
+        <dd>Declared package locking what is reportable and at what resolution.</dd>
+        <dt><code>End</code>, <code>Fib(e)</code></dt>
+        <dd>Endpoint map and induced fibers (within-endpoint equivalence classes).</dd>
+        <dt><code>DiamD(e;C)</code>, <code>GapD(End;C)</code></dt>
+        <dd>Within-fiber diameter and worst-case global gap.</dd>
         <dt><code>Endpoint refinement</code></dt>
-        <dd>A strict refinement makes fibers smaller; under a fixed protocol, refinement is used to control/report the gap.</dd>
-
-        <dt><code>Witness / lower bound</code></dt>
-        <dd>Constructive mechanism certifying unavoidable positive gap when endpoint capacity is insufficient for the task class.</dd>
+        <dd>Refinement shrinks fibers; under fixed protocol, gaps are non-increasing.</dd>
       </dl>
     </section>
 
-    <section class="card" aria-label="links">
+    <section class="card">
       <h2>Links</h2>
       <ul>
+        <li>PDF: <a href="Why_Hierarchical_Attention_Works.pdf">Why_Hierarchical_Attention_Works.pdf</a></li>
         <li>DOI: <a href="https://doi.org/10.5281/zenodo.18810251">10.5281/zenodo.18810251</a></li>
-        <li>Repository: <a href="https://github.com/ybing2093-ops/why-hierarchical-attention-works">why-hierarchical-attention-works</a></li>
-        <li>Project canonical entry: <a href="/">https://ybing2093-ops.github.io/</a></li>
+        <li>Repo: <a href="https://github.com/ybing2093-ops/why-hierarchical-attention-works">why-hierarchical-attention-works</a></li>
       </ul>
-    </section>
-
-    <section class="card" aria-label="keywords">
-      <h2>Keywords</h2>
-      <div>
-        <span class="k">hierarchical attention</span>
-        <span class="k">endpoint map</span>
-        <span class="k">fiber</span>
-        <span class="k">gap</span>
-        <span class="k">endpoint refinement</span>
-        <span class="k">LLMs</span>
-        <span class="k">capacity lower bounds</span>
-      </div>
     </section>
 
     <p class="muted small">Last updated: 2026-03-01</p>
