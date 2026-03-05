@@ -1,0 +1,170 @@
+<!-- /papers/endpoint-path-gaps.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Endpoint–Path Gaps as a Diagnostic of RG Coarse-Graining Failure</title>
+  <meta name="description" content="Zihe Zhao. Endpoint–path diagnostics for RG/EFT: fix viewpoint VR, define strict path divergence and endpoint-pair divergence, and isolate the endpoint–path residual (Γpath). Includes a computable proxy (Γgeo) under declared validity conditions and minimal reproduction artifacts." />
+  <link rel="canonical" href="https://ybing2093-ops.github.io/papers/endpoint-path-gaps.html" />
+
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="author" content="Zihe Zhao" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Endpoint–Path Gaps as a Diagnostic of RG Coarse-Graining Failure" />
+  <meta property="og:description" content="Viewpoint-locked (VR) endpoint–path residuals: separate endpoint agreement from process/trajectory validity; strict decomposition + reproducibility hooks." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ybing2093-ops.github.io/papers/endpoint-path-gaps.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Highwire / Scholar-style meta (no fake PDF URL) -->
+  <meta name="citation_title" content="Endpoint–Path Gaps as a Diagnostic of RG Coarse-Graining Failure" />
+  <meta name="citation_author" content="Zihe Zhao" />
+  <meta name="citation_publication_date" content="2026" />
+  <meta name="citation_doi" content="10.5281/zenodo.18414030" />
+  <meta name="citation_fulltext_html_url" content="https://ybing2093-ops.github.io/papers/endpoint-path-gaps.html" />
+  <meta name="citation_language" content="en" />
+  <!-- If you host the PDF on this site later, add:
+       <meta name="citation_pdf_url" content="https://ybing2093-ops.github.io/papers/endpoint-path-gaps.pdf" />
+  -->
+
+  <!-- Schema.org: ScholarlyArticle -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"Endpoint–Path Gaps as a Diagnostic of RG Coarse-Graining Failure",
+    "author":{
+      "@type":"Person",
+      "name":"Zihe Zhao",
+      "identifier":"https://orcid.org/0009-0008-4692-4408"
+    },
+    "url":"https://ybing2093-ops.github.io/papers/endpoint-path-gaps.html",
+    "identifier":"https://doi.org/10.5281/zenodo.18414030",
+    "isPartOf":{"@type":"WebSite","name":"Structural Gaps — Canonical Entry","url":"https://ybing2093-ops.github.io/"},
+    "about":[
+      "renormalization group","effective field theory","coarse-graining",
+      "relative entropy","endpoint matching","process divergence","information geometry",
+      "viewpoint-locked diagnostics"
+    ]
+  }
+  </script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; line-height: 1.55; color:#111; }
+    header { padding: 24px 18px; border-bottom: 1px solid #eee; background:#fff; }
+    main { max-width: 980px; margin: 0 auto; padding: 18px; }
+    .card { border: 1px solid #eee; border-radius: 14px; padding: 16px; margin: 14px 0; background:#fff; }
+    .muted { color: #555; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, pre { background: #f6f8fa; border-radius: 10px; }
+    code { padding: 2px 6px; }
+    pre { padding: 12px; overflow:auto; }
+    .small { font-size: 0.95em; }
+    .k { display:inline-block; border:1px solid #eee; border-radius:999px; padding:4px 10px; margin:4px 6px 0 0; background:#fafafa; }
+    dl { margin: 0; }
+    dt { margin-top: 10px; font-weight: 700; }
+    dd { margin-left: 0; margin-top: 4px; color:#222; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <main>
+      <p class="muted small">
+        <a href="/papers/">Papers index</a> · <a href="/">Canonical entry</a>
+      </p>
+
+      <h1>Endpoint–Path Gaps as a Diagnostic of RG Coarse-Graining Failure</h1>
+
+      <p class="muted">
+        Author: <a href="https://orcid.org/0009-0008-4692-4408">Zihe Zhao</a> · Year: 2026<br/>
+        DOI (immutable record): <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a><br/>
+        Code repository: <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">github.com/ybing2093-ops/endpoint-path-gaps-qed</a>
+      </p>
+    </main>
+  </header>
+
+  <main>
+    <section class="card" aria-label="tldr">
+      <h2>TL;DR (what I did)</h2>
+      <ul>
+        <li>I fixed an RG/EFT analysis viewpoint <code>VR</code> (protocol + conventions) so all reported quantities are viewpoint-conditioned.</li>
+        <li>I defined a strict path/process divergence and the induced endpoint-pair divergence, then isolated the endpoint–path residual <code>Γpath</code> in a decomposition of the form <code>Δpath = Δpair + Γpath</code> with <code>Γpath ≥ 0</code>.</li>
+        <li>I defined a computable proxy gap <code>Γgeo</code> under explicit validity conditions and provided a minimal reproduction path that generates a reference artifact.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="abstract">
+      <h2>Abstract (plain text)</h2>
+      <p>
+        This work addresses a recurring modeling shortcut: endpoint agreement on a finite window is often treated as evidence that the underlying
+        coarse-grained process is valid. Under a fixed, declared viewpoint <code>VR</code>, the paper formalizes full trajectory (path) divergence and its
+        endpoint-pair marginal, then isolates the residual term that measures what endpoints fail to capture. The resulting endpoint–path gap is treated
+        as an auditable diagnostic object: when it vanishes (under the declared viewpoint), endpoints are sufficient in the strict sense; when it does not,
+        endpoint matching can be misleading. A computable proxy gap is introduced under explicit validity conditions, together with reproducibility hooks.
+      </p>
+    </section>
+
+    <section class="card" aria-label="minimal-objects">
+      <h2>Minimal objects (anchors for machines and readers)</h2>
+      <dl>
+        <dt><code>VR</code> (viewpoint, RG/EFT)</dt>
+        <dd>Declared analysis setting locking interface, scheme/regulator, discrepancy functional, reconstruction conventions, aggregation and thresholds.</dd>
+
+        <dt><code>Δpath</code></dt>
+        <dd>Strict path/process divergence between two viewpoint-induced scale-chain process objects.</dd>
+
+        <dt><code>Δpair</code></dt>
+        <dd>Endpoint-pair marginal divergence induced by retaining only the endpoint joint variable <code>E=(Y0,YN)</code> from the path object.</dd>
+
+        <dt><code>Γpath</code></dt>
+        <dd>Endpoint–path residual in <code>Δpath = Δpair + Γpath</code>, with <code>Γpath ≥ 0</code>; <code>Γpath = 0</code> is the sharp endpoint sufficiency criterion under fixed <code>VR</code>.</dd>
+
+        <dt><code>Γgeo</code> (proxy)</dt>
+        <dd>Computable proxy gap defined from induced length vs endpoint distance (<code>Γgeo := LII − dend</code>) under declared validity conditions; correspondence to <code>Γpath</code> is treated as calibration, not automatic identity.</dd>
+      </dl>
+    </section>
+
+    <section class="card" aria-label="reproducibility">
+      <h2>Minimal reproduction (from the repository)</h2>
+      <p class="muted">One command produces a key reference artifact (as documented in the repo):</p>
+      <pre><code>python run_b1_path2.py
+# expected artifact: fig_gamma_geo_ci.pdf</code></pre>
+      <p class="muted small">
+        Repo: <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">endpoint-path-gaps-qed</a>
+      </p>
+    </section>
+
+    <section class="card" aria-label="links">
+      <h2>Links</h2>
+      <ul>
+        <li>DOI: <a href="https://doi.org/10.5281/zenodo.18414030">10.5281/zenodo.18414030</a></li>
+        <li>Repository: <a href="https://github.com/ybing2093-ops/endpoint-path-gaps-qed">endpoint-path-gaps-qed</a></li>
+        <li>Project canonical entry: <a href="/">https://ybing2093-ops.github.io/</a></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="keywords">
+      <h2>Keywords</h2>
+      <div>
+        <span class="k">RG</span>
+        <span class="k">EFT</span>
+        <span class="k">endpoint matching</span>
+        <span class="k">path divergence</span>
+        <span class="k">relative entropy</span>
+        <span class="k">Γpath</span>
+        <span class="k">Γgeo</span>
+        <span class="k">viewpoint VR</span>
+      </div>
+    </section>
+
+    <p class="muted small">Last updated: 2026-03-01</p>
+  </main>
+</body>
+</html>
